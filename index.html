@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/styleHOME.css">
+    <link rel="icon" id="favicon" href="../imghome/logo2.png" type="image/x-icon">
+    <title>Clinica de ouvidos</title>
+</head>
+<body>
+    <section>
+        <div class="circle"></div>
+        <header>
+            <a class="logo" href="index.html"><img src="../imghome/logo2.png" alt="" class="logo"></a>
+            <nav class="navega" id="mainNav">
+                <button id="menuBtn" class="menu-btn" onclick="toggleSidebar()">
+                    <span class="menu-icon"></span> ☰
+                </button>                
+            </nav>
+        </header>
+        <div id="sidebar" class="sidebar">
+            <a href="clientecadTeste.html" onclick="showContent('home')">CadCliente</a>
+            <a href="produto.html" onclick="showContent('about')">Produto</a>
+            <a href="#services" onclick="showContent('services')">Serviços</a>
+            <a href="contact.html" onclick="showContent('contact')">Contato</a>
+
+        </div>
+        <div class="content">
+            <div class="text">
+                <h2 id="merda">Venha cuidar da sua audição<br><span id="sla">Com a Gente</span></h2>
+                <p>Na nossa clínica, oferecemos o melhor cuidado para a sua saúde auditiva. Nossos especialistas estão prontos para ajudá-lo a manter e melhorar a sua audição com tratamentos de ponta e atendimento personalizado.</p>
+                <a href="deshboard.html">Visualizar Estoque</a>
+            </div>
+        </div>
+        <ul class="icons">
+            <li><a href="#"><img src="../imghome/facebook.png" alt=""></a></li>
+            <li><a href="#"><img src="../imghome/twitter.png" alt=""></a></li>
+            <li><a href="#"><img src="../imghome/instagram.png" alt=""></a></li>
+        </ul>
+        <div class="boxImg">
+            <img src="../imghome/capeta surda.png.png" alt="" class="img4">
+        </div>
+    </section>
+    <script>
+        function toggleSidebar() {
+            var sidebar = document.getElementById("sidebar");
+            if (sidebar.style.width === "250px") {
+                sidebar.style.width = "0";
+            } else {
+                sidebar.style.width = "250px";
+            }
+        }
+
+        function closeSidebar() {
+            document.getElementById("sidebar").style.width = "0";
+        }
+
+        // Função para fechar a barra lateral
+function closeSidebar() {
+    document.getElementById("sidebar").style.width = "0";
+}
+
+// Evento de clique no documento
+document.addEventListener('click', function(event) {
+    var sidebar = document.getElementById('sidebar');
+    var menuBtn = document.getElementById('menuBtn');
+    // Verifica se o clique não ocorreu dentro da barra lateral nem no botão de menu
+    if (!sidebar.contains(event.target) && event.target !== menuBtn) {
+        sidebar.style.width = '0'; // Fecha a barra lateral
+    }
+});
+
+    </script>
+</body>
+</html>
